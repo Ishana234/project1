@@ -1,0 +1,22 @@
+<!-- events/templates/events/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events Home Page</title>
+</head>
+<body>
+    <h1>Welcome to the Events Home Page</h1>
+    <p>Here you can find information about upcoming events.</p>
+    
+    <h2>Upcoming Events:</h2>
+    <ul>
+        {% for event in events %}
+            <li>{{ event.name }} - {{ event.start_time }} at {{ event.location }}</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{% url 'participant_registration' %}">Register for an Event</a>  <!-- Link to the registration form -->
+</body>
+</html>

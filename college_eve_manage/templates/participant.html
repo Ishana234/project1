@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Registration</title>
+</head>
+<body>
+    <h2>Register as a Participant</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="branch">Branch:</label>
+        <input type="text" name="branch" required><br>
+
+        <label for="semester">Semester:</label>
+        <input type="text" name="semester" required><br>
+
+        <label for="college_id">College ID:</label>
+        <input type="text" name="college_id" required><br>
+
+        <label for="status">Status:</label>
+        <select name="status" id="status">
+            <option value="Registered">Registered</option>
+            <option value="Checked-in">Checked-in</option>
+            <option value="Cancelled">Cancelled</option>
+        </select><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
